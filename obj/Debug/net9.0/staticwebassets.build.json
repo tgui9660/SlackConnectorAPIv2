@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "wwkqjO+hfijihEwnrM8JieLtm8Z2MD72iWwzseApsyo=",
+  "Source": "SlackConnectorAPIv2",
+  "BasePath": "_content/SlackConnectorAPIv2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
