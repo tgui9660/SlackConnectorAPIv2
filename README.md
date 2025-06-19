@@ -20,18 +20,18 @@ Above library implements these slack calls
 
 
 </br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
 Test URL (port may vary)</br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
 
 http://localhost:5160/swagger/index.html
 
 
 
 </br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
 Recommended Bot Token Scopes</br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
 
 channels:manage
 Manage public channels that DaisySlackBotv2 has been added to and create new ones
