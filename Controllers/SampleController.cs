@@ -20,6 +20,31 @@ namespace SlackConnectorAPIv2.Controllers;
 [Route("[controller]")]
 public class SampleController : ControllerBase
 {
+
+    // Send message to channel
+    [HttpGet("SendMessageToChannelNotAsync")]
+    public string SendMessageToChannelNotAsync(string oathToken, string channel, string message)
+    {
+
+        try
+        {
+            // SlackNet send message to channel
+            var api = new SlackServiceBuilder().UseApiToken(oathToken).GetApiClient();
+
+            // Send a message
+            Task.Run(async () =>
+            {
+                await api.Chat.PostMessage(new Message { Text = "Bot Message: [" + message + "]", Channel = channel });
+            }).Wait();
+
+            return "Everything executed OK!";
+        }
+        catch (Exception e)
+        {
+            return "Error: " + e.Message;
+        }
+    }
+
     // Send message to channel
     [HttpGet("SendMessageToChannel")]
     public async Task<string> SendMessageToChannel(string oathToken, string channel, string message)
