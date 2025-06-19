@@ -21,8 +21,8 @@ namespace SlackConnectorAPIv2.Controllers;
 public class SampleController : ControllerBase
 {
     // Send message to channel
-    [HttpGet("SendChannelMessage")]
-    public async Task<string> SendChannelMessage(string oathToken, string channel, string message)
+    [HttpGet("SendMessageToChannel")]
+    public async Task<string> SendMessageToChannel(string oathToken, string channel, string message)
     {
 
         try
@@ -41,7 +41,7 @@ public class SampleController : ControllerBase
         }
     }
 
-    // Send message to channel
+    // Get a list of available real user names
     [HttpGet("GetAvailableRealNames")]
     public async Task<List<string>> GetAvailableRealNames(string oathToken)
     {
@@ -62,7 +62,7 @@ public class SampleController : ControllerBase
         return userRealNamesFound;
     }
 
-    // Send message to channel
+    // Send message to person by name
     [HttpGet("SendMessageToRealName")]
     public async Task<string> SendMessageToRealName(string oathToken, string humanName, string message)
     {
