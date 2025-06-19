@@ -2,7 +2,9 @@
 
 Sample C# Slack Connector/Bot Web API to send a message to a channel.
 
+
 This is a simple project. Code was written for readability.
+
 
 Good tutorial on setting up SlackNet and Slack API configurations
 You'll need your oath token!
@@ -15,7 +17,21 @@ SlackNet .Net library
 Above library implements these slack calls
 -- https://api.slack.com/methods
 
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+Test URL (port may vary)
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+http://localhost:5160/swagger/index.html
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Recommended Bot Token Scopes
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 channels:manage
 Manage public channels that DaisySlackBotv2 has been added to and create new ones
