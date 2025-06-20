@@ -20,50 +20,25 @@ namespace SlackConnectorAPIv2.Controllers;
 [Route("[controller]")]
 public class SampleController : ControllerBase
 {
-
-    // Send message to channel
-    [HttpGet("SendMessageToChannelNotAsync")]
-    public string SendMessageToChannelNotAsync(string oathToken, string channel, string message)
+    // Get a list names and IDs
+    [HttpGet("GetNamesAndIDs")]
+    public async Task<Dictionary<string, string>> GetNamesAndIDs(string oathToken)
     {
 
-        try
-        {
-            // SlackNet send message to channel
-            var api = new SlackServiceBuilder().UseApiToken(oathToken).GetApiClient();
+        Dictionary<string, string> namesIDs = new Dictionary<string, string>();
 
-            // Send a message
-            Task.Run(async () =>
+        var api = new SlackServiceBuilder().UseApiToken(oathToken).GetApiClient();
+
+        UserListResponse listOfUsers = await api.Users.List();
+
+        foreach (User theUser in listOfUsers.Members)
+        {
+            if (theUser.RealName != null)
             {
-                await api.Chat.PostMessage(new Message { Text = "Bot Message: [" + message + "]", Channel = channel });
-            }).Wait();
-
-            return "Everything executed OK!";
+                namesIDs[theUser.RealName] = theUser.Id;
+            }
         }
-        catch (Exception e)
-        {
-            return "Error: " + e.Message;
-        }
-    }
-
-    // Send message to channel
-    [HttpGet("SendMessageToChannel")]
-    public async Task<string> SendMessageToChannel(string oathToken, string channel, string message)
-    {
-
-        try
-        {
-            // SlackNet send message to channel
-            var api = new SlackServiceBuilder().UseApiToken(oathToken).GetApiClient();
-
-            // Send a message
-            await api.Chat.PostMessage(new Message { Text = "Bot Message: [" + message + "]", Channel = channel });
-
-            return "Everything executed OK!";
-        }
-        catch (Exception e)
-        {
-            return "Error: " + e.Message;
-        }
+        return namesIDs;
     }
 
     // Get a list of available real user names
@@ -136,6 +111,50 @@ public class SampleController : ControllerBase
         }
     }
 
+    // Send message to channel
+    [HttpGet("SendMessageToChannelNotAsync")]
+    public string SendMessageToChannelNotAsync(string oathToken, string channel, string message)
+    {
+
+        try
+        {
+            // SlackNet send message to channel
+            var api = new SlackServiceBuilder().UseApiToken(oathToken).GetApiClient();
+
+            // Send a message
+            Task.Run(async () =>
+            {
+                await api.Chat.PostMessage(new Message { Text = "Bot Message: [" + message + "]", Channel = channel });
+            }).Wait();
+
+            return "Everything executed OK!";
+        }
+        catch (Exception e)
+        {
+            return "Error: " + e.Message;
+        }
+    }
+
+    // Send message to channel
+    [HttpGet("SendMessageToChannel")]
+    public async Task<string> SendMessageToChannel(string oathToken, string channel, string message)
+    {
+
+        try
+        {
+            // SlackNet send message to channel
+            var api = new SlackServiceBuilder().UseApiToken(oathToken).GetApiClient();
+
+            // Send a message
+            await api.Chat.PostMessage(new Message { Text = "Bot Message: [" + message + "]", Channel = channel });
+
+            return "Everything executed OK!";
+        }
+        catch (Exception e)
+        {
+            return "Error: " + e.Message;
+        }
+    }
 
     // Test Method for sanity
     [HttpGet("echo")]
