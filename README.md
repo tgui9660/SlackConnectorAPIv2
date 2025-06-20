@@ -34,25 +34,25 @@ Recommended Bot Token Scopes</br>
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
 
 channels:manage
-Manage public channels that DaisySlackBotv2 has been added to and create new ones
+Manage public channels that @YourBot has been added to and create new ones
 
 channels:read
 View basic information about public channels in a workspace
 
 chat:write
-Send messages as @DaisySlackBotv2
+Send messages as @YourBot
 
 chat:write.public
-Send messages to channels @DaisySlackBotv2 isn't a member of
+Send messages to channels @YourBot isn't a member of
 
 dnd:read
 View Do Not Disturb settings for people in a workspace
 
 groups:write
-Manage private channels that DaisySlackBotv2 has been added to and create new ones
+Manage private channels that YourBot has been added to and create new ones
 
 im:read
-View basic information about direct messages that DaisySlackBotv2 has been added to
+View basic information about direct messages that YourBot has been added to
 
 im:write
 Start direct messages with people
@@ -67,4 +67,4 @@ users:read.email
 View email addresses of people in a workspace
 
 users:write
-Set presence for DaisySlackBotv2
+Set presence for YourBot
