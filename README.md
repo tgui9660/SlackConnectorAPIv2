@@ -27,8 +27,8 @@ public async Task<List<string>> GetAvailableRealNames(string oathToken)
 
 ### Send a message to a person by name 
 ```cs
-        [HttpGet("SendMessageToRealName")]
-        public async Task<string> SendMessageToRealName(string oathToken, string humanName, string message)
+[HttpGet("SendMessageToRealName")]
+public async Task<string> SendMessageToRealName(string oathToken, string humanName, string message)
 ```
 
 <br/>
