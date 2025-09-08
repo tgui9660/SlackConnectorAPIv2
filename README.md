@@ -6,6 +6,38 @@ This is a sample C# Slack Connector/Bot Web API to send a message to a channel. 
 This is a good tutorial on setting up SlackNet and Slack API configurations.
 * https://danielko.medium.com/building-an-app-as-an-agent-for-slack-with-net-959e1c2ba3afhttps://danielko.medium.com/building-an-app-as-an-agent-for-slack-with-net-959e1c2ba3af
 
+## Descriptor.yaml
+This file contains all parts that are needed for consumption of this service.
+
+Example:
+```cs
+name: SlackConnectorAPIv2
+version: 1.0
+author:
+  - name: First Last
+  - email: test.email@email.com
+  - company: Company Name
+description: This is a sample Slack Bot API.
+requiredfiles:
+  - DLL:
+      name: SlackNet.dll
+      version: 1.0.0.0
+  - DLL:
+      name: Newtonsoft.Json.dll
+      version: 13.0.0.0
+  - DLL:
+      name: System.Reactive.dll
+      version: 0.16.1.0
+  - DLL:
+      name: Microsoft.Bcl.AsyncInterfaces.dll
+      version: 4.3.0.0
+inputs:
+  - oathkey: string
+
+```
+### TODO
+* Define a schema for the above yaml.
+
 
 ## Restful Calls Available
 
