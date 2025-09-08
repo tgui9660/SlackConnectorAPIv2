@@ -1,75 +1,74 @@
 # SlackConnectorAPIv2
 
-Sample C# Slack Connector/Bot Web API to send a message to a channel.
+This is a sample C# Slack Connector/Bot Web API to send a message to a channel. This is a simple project. Code was written for readability.
 
 
-This is a simple project. Code was written for readability.
+This is a good tutorial on setting up SlackNet and Slack API configurations.
+* https://danielko.medium.com/building-an-app-as-an-agent-for-slack-with-net-959e1c2ba3afhttps://danielko.medium.com/building-an-app-as-an-agent-for-slack-with-net-959e1c2ba3af
+
+## You'll need your oath token
+
+Looks like: xoxp-989876-86896976-945595859876789-987sadf67sd5f56s87sa5fdsd1b
+
+Withing the api.slack.com portal the oath token can be found here:
 
 
-Good tutorial on setting up SlackNet and Slack API configurations
-
-You'll need your oath token!
-
-looks like: xoxp-989876-86896976-945595859876789-987sadf67sd5f56s87sa5fdsd1b
-
-https://danielko.medium.com/building-an-app-as-an-agent-for-slack-with-net-959e1c2ba3af
+![image info](images/slackconnector-OATH-token.png)
 
 
-SlackNet .Net library
--- https://github.com/soxtoby/SlackNet
+## SlackNet .Net library
 
+This is the official C# interface to Slack Bot features
 
-Above library implements these slack calls
--- https://api.slack.com/methods
-
-
-
-</br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
-Test URL (port may vary)</br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
-
-http://localhost:5160/swagger/index.html
-
+* https://github.com/soxtoby/SlackNet
 
 
 </br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
-Recommended Bot Token Scopes</br>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</br>
 
-channels:manage
+## Swagger test URL
+
+* http://localhost:5160/swagger/index.html
+
+</br>
+
+## Recommended Slack Bot Token Scopes
+
+Reference link below.
+* https://api.slack.com/methods
+
+
+### channels:manage
 Manage public channels that @YourBot has been added to and create new ones
 
-channels:read
+### channels:read
 View basic information about public channels in a workspace
 
-chat:write
+### chat:write
 Send messages as @YourBot
 
-chat:write.public
+### chat:write.public
 Send messages to channels @YourBot isn't a member of
 
-dnd:read
+### dnd:read
 View Do Not Disturb settings for people in a workspace
 
-groups:write
+### groups:write
 Manage private channels that YourBot has been added to and create new ones
 
-im:read
+### im:read
 View basic information about direct messages that YourBot has been added to
 
-im:write
+### im:write
 Start direct messages with people
 
-mpim:write
+### mpim:write
 Start group direct messages with people
 
-users:read
+### users:read
 View people in a workspace
 
-users:read.email
+### users:read.email
 View email addresses of people in a workspace
 
-users:write
+### users:write
 Set presence for YourBot
