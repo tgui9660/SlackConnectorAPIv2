@@ -1,6 +1,0 @@
-@SlackConnectorAPIv2_HostAddress = http://localhost:5160
-
-GET {{SlackConnectorAPIv2_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
