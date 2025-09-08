@@ -6,6 +6,54 @@ This is a sample C# Slack Connector/Bot Web API to send a message to a channel. 
 This is a good tutorial on setting up SlackNet and Slack API configurations.
 * https://danielko.medium.com/building-an-app-as-an-agent-for-slack-with-net-959e1c2ba3afhttps://danielko.medium.com/building-an-app-as-an-agent-for-slack-with-net-959e1c2ba3af
 
+
+## Restful Calls Available
+
+### Get a list of all names and assocated IDs 
+```cs
+[HttpGet("GetNamesAndIDs")]
+public async Task<Dictionary<string, string>> GetNamesAndIDs(string oathToken)
+```
+
+<br/>
+
+### Get a list of all human readable names 
+```cs
+[HttpGet("GetAvailableRealNames")]
+public async Task<List<string>> GetAvailableRealNames(string oathToken)
+```
+
+<br/>
+
+### Send a message to a person by name 
+```cs
+        [HttpGet("SendMessageToRealName")]
+        public async Task<string> SendMessageToRealName(string oathToken, string humanName, string message)
+```
+
+<br/>
+
+### Send a message to a channel synchronously
+```cs
+[HttpGet("SendMessageToChannelNotAsync")]
+public string SendMessageToChannelNotAsync(string oathToken, string channel, string message)
+```
+
+<br/>
+
+### Send a message to a channel asynchronously 
+```cs
+[HttpGet("SendMessageToChannel")]
+public async Task<string> SendMessageToChannel(string oathToken, string channel, string message)
+```
+<br/>
+
+### Test call to see if web api is available
+```cs
+[HttpGet("ping")]
+public string ping()
+``` 
+
 ## You'll need your oath token
 
 Looks like: xoxp-989876-86896976-945595859876789-987sadf67sd5f56s87sa5fdsd1b
@@ -33,7 +81,7 @@ This is the official C# interface to Slack Bot features
 
 ## Recommended Slack Bot Token Scopes
 
-Reference link below.
+Scopes define what rights and actions a slack bot will have acess to. Reference link below.
 * https://api.slack.com/methods
 
 

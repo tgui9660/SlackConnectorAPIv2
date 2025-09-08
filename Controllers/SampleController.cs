@@ -157,13 +157,6 @@ public class SampleController : ControllerBase
     }
 
     // Test Method for sanity
-    [HttpGet("echo")]
-    public string echo(string testMessage)
-    {
-        return "back: " + testMessage;
-    }
-
-    // Test Method for sanity
     [HttpGet("ping")]
     public string ping()
     {
