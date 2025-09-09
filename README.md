@@ -96,7 +96,7 @@ public string ping()
 
 Looks like: xoxp-989876-86896976-945595859876789-987sadf67sd5f56s87sa5fdsd1b
 
-Withing the api.slack.com portal the oath token can be found here:
+Within the api.slack.com portal the oath token can be found here:
 
 
 ![image info](images/slackconnector-OATH-token.png)
