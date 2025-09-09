@@ -19,20 +19,26 @@ author:
   - company: Company Name
 description: This is a sample Slack Bot API.
 requiredfiles:
+  - CONTROLLER:
+      name: SampleController.cs
+      location: ./Controllers/
   - DLL:
       name: SlackNet.dll
       version: 1.0.0.0
+      location: ./files/
   - DLL:
       name: Newtonsoft.Json.dll
       version: 13.0.0.0
+      location: ./files/
   - DLL:
       name: System.Reactive.dll
       version: 0.16.1.0
+      location: ./files/
   - DLL:
       name: Microsoft.Bcl.AsyncInterfaces.dll
       version: 4.3.0.0
-inputs:
-  - oathkey: string
+      location: ./files/
+
 
 ```
 ### TODO
