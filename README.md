@@ -22,6 +22,9 @@ requiredfiles:
   - CONTROLLER:
       name: SampleController.cs
       location: ./Controllers/
+  - FILE:
+      name: oathkey.txt
+      location: ./files/
   - DLL:
       name: SlackNet.dll
       version: 1.0.0.0
@@ -38,8 +41,6 @@ requiredfiles:
       name: Microsoft.Bcl.AsyncInterfaces.dll
       version: 4.3.0.0
       location: ./files/
-
-
 ```
 ### TODO
 * Define a schema for the above yaml.
