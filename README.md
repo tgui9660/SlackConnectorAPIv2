@@ -9,6 +9,16 @@ This is a good tutorial on setting up SlackNet and Slack API configurations.
 ## Descriptor.yaml
 This file contains all parts that are needed for consumption of this service.
 
+Please note that there can be only ONE controller file targeted for ingestion.
+
+Options for "requiredfiles" are:
+* CONTROLLER - The SINGLE controller file implemented
+* DLL
+* FILE - Anything that is not a DLL
+
+<br/>
+
+
 Example:
 ```cs
 name: SlackConnectorAPIv2
@@ -44,7 +54,7 @@ requiredfiles:
 ```
 ### TODO
 * Define a schema for the above yaml.
-
+* Do we need DLL version?
 
 ## Restful Calls Available
 
